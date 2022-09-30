@@ -10,7 +10,6 @@ use Doctrine\DBAL\Exception\DatabaseRequired;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Collection;
-use PDOException;
 use SplFileInfo;
 use Symfony\Component\Finder\Finder;
 
