@@ -1,0 +1,40 @@
+{
+  "name": "cubadevops/dbmigrator",
+  "description": "Simple PHP Version Control(migration system) for databases",
+  "type": "library",
+  "minimum-stability": "stable",
+  "version": "1.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cuba DevOps",
+      "email": "info@cubadevops.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CubaDevOps\\DbMigrator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CubaDevOps\\DbMigrator\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "illuminate/database": "^8.83",
+    "symfony/finder": "^5.4",
+    "doctrine/dbal": "^3.4",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "friendsofphp/php-cs-fixer": "*",
+    "phpunit/phpunit": "*"
+  },
+  "scripts": {
+    "test": [
+      "./vendor/bin/phpunit tests"
+    ]
+  }
+}
