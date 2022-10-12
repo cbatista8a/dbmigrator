@@ -7,11 +7,11 @@ use CubaDevOps\DbMigrator\domain\Configurator;
 use CubaDevOps\DbMigrator\domain\interfaces\Migration;
 use Doctrine\DBAL\ConnectionException;
 use Doctrine\DBAL\Exception\DatabaseRequired;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Collection;
-use SplFileInfo;
 use Symfony\Component\Finder\Finder;
+use SplFileInfo;
 
 class Versioner
 {
@@ -20,9 +20,9 @@ class Versioner
      */
     private Finder $file_manager;
     /**
-     * @var Capsule
+     * @var Manager
      */
-    public Capsule $orm;
+    public Manager $orm;
     /**
      * @var Configurator
      */
@@ -32,10 +32,7 @@ class Versioner
     {
         $this->file_manager = new Finder();
         $this->configurator = $configurator;
-        $this->orm = new Capsule;
-        $this->orm->addConnection($this->configurator->getConnection()->toArray());
-        $this->orm->setAsGlobal();
-        $this->orm->bootEloquent();
+        $this->orm = new ORM($configurator->getConnection());
         $this->installVersionTable();
     }
 
