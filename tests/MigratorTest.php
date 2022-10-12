@@ -17,7 +17,7 @@ class MigratorTest extends TestCase
 
     public function setUp(): void
     {
-        $connection = new Connection('database', '3306', 'root', 'root', 'test', 'mysql');
+        $connection = new Connection('server', '3306', 'root', 'root', 'test', 'mysql');
         $configurator = new Configurator($connection, __DIR__.'/migrations_test', 'migrations_version');
         $this->migrator = new Migrator($configurator);
     }

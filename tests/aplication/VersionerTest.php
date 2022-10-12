@@ -19,7 +19,7 @@ class VersionerTest extends TestCase
     public function __construct()
     {
         parent::__construct();
-        $this->connection = new Connection('database', '3306', 'root', 'root', 'test', 'mysql');
+        $this->connection = new Connection('server', '3306', 'root', 'root', 'test', 'mysql');
         $file_path = dirname(__FILE__, 2) . '/migrations_test/MigrationTest.php';
         $this->file = new SplFileInfo($file_path);
     }
