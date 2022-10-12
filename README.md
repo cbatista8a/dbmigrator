@@ -21,7 +21,7 @@ Finally create the migrator manager
 
 ### How to use
 
-First you must create a migration class that extend of Migration
+First you must create a migration class that extend of Migration or just implement Migration interface if you use a simple plain query inside "up" and "down" methods
 
 ```php
 use CubaDevOps\DbMigrator\domain\Migration;
