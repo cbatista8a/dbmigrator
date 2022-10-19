@@ -5,8 +5,8 @@ namespace CubaDevOps\DbMigrator\aplication;
 
 use CubaDevOps\DbMigrator\domain\Configurator;
 use CubaDevOps\DbMigrator\domain\interfaces\Migration;
-use Doctrine\DBAL\ConnectionException;
-use Doctrine\DBAL\Exception\DatabaseRequired;
+use CubaDevOps\DbMigrator\domain\exceptions\ConnectionException;
+use CubaDevOps\DbMigrator\domain\exceptions\DatabaseRequired;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Collection;
