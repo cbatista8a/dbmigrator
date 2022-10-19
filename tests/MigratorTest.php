@@ -6,8 +6,6 @@ use CubaDevOps\DbMigrator\domain\Connection;
 use CubaDevOps\DbMigrator\Migrator;
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(__FILE__,2).'/vendor/autoload.php';
-
 class MigratorTest extends TestCase
 {
     /**

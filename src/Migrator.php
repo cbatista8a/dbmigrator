@@ -9,8 +9,6 @@ use Exception;
 use PhpToken;
 use SplFileInfo;
 
-require_once dirname(__FILE__,2).'/vendor/autoload.php';
-
 class Migrator
 {
     /**
