@@ -24,7 +24,6 @@
   "require": {
     "illuminate/database": "^8.83",
     "symfony/finder": "^5.4",
-    "doctrine/dbal": "^3.4",
     "ext-pdo": "*"
   },
   "require-dev": {
