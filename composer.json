@@ -3,7 +3,7 @@
   "description": "Simple PHP Version Control(migration system) for databases",
   "type": "library",
   "minimum-stability": "stable",
-  "version": "1.0",
+  "version": "1.0.1",
   "license": "MIT",
   "authors": [
     {
